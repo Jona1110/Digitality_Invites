@@ -1,0 +1,117 @@
+:root {
+    --gold: #d4af37;
+    --gold-light: #f1d592;
+    --dark-bg: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Título con Efecto Brillo (Shimmer) */
+.shimmer-title {
+    font-family: 'Alex Brush', cursive;
+    font-size: clamp(4rem, 15vw, 8rem);
+    background: linear-gradient(to right, #bf953f 20%, #fcf6ba 40%, #fcf6ba 60%, #bf953f 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+    margin: 0;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+/* Botón de Música Flotante */
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--gold);
+    border: none;
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+/* Hero con Frame Diamante */
+.hero-luxury {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600') center/cover fixed;
+}
+
+.diamond-frame {
+    border: 1px solid var(--gold);
+    padding: 60px 40px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    border-radius: 5px;
+}
+
+/* Tarjetas de Itinerario */
+.luxury-card {
+    background: linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9));
+    padding: 40px;
+    border-radius: 0 40px 0 40px;
+    border: 1px solid var(--glass);
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.luxury-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+/* Ticket de Pase Digital */
+.ticket-luxury {
+    display: flex;
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    color: #111;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.ticket-left {
+    background: #111;
+    color: var(--gold);
+    padding: 30px;
+    width: 35%;
+    border-right: 2px dashed #333;
+    text-align: center;
+}
+
+.ticket-right { padding: 30px; width: 65%; text-align: center; }
+
+.wa-btn {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ticket-luxury { flex-direction: column; }
+    .ticket-left { width: 100%; border-right: none; border-bottom: 2px dashed #ccc; }
+    .ticket-right { width: 100%; }
+}

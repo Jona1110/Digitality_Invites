@@ -1,0 +1,59 @@
+:root {
+    --primary: #ffd700;
+    --dark: #0a0e14;
+    --radius: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--dark);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+#particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; }
+
+.section-padding { padding: 80px 5%; }
+.bg-soft { background: rgba(255, 255, 255, 0.02); }
+.text-center { text-align: center; }
+
+/* Hero */
+.hero-kids {
+    height: 75vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; background: linear-gradient(rgba(10,14,20,0.6), rgba(10,14,20,0.6)), url('flores.jpg');
+    background-size: cover; background-position: center; background-attachment: fixed;
+}
+.kids-title { font-family: 'Bangers', cursive; font-size: 5rem; color: var(--primary); text-shadow: 4px 4px 0px rgba(0,0,0,0.5); }
+.hero-tagline { letter-spacing: 4px; font-weight: 300; }
+
+/* Grid Sistema */
+.container { max-width: 1100px; margin: 0 auto; }
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+/* Cards */
+.kids-card { 
+    background: rgba(255, 255, 255, 0.05); border-radius: var(--radius); 
+    padding: 40px 20px; text-align: center; border: 1px solid rgba(255, 215, 0, 0.1); transition: 0.4s; 
+}
+.kids-card:hover { border-color: var(--primary); transform: translateY(-10px); }
+.icon-circle { width: 70px; height: 70px; background: var(--primary); color: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.8rem; }
+
+/* Galería */
+.kids-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
+.k-img { width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius); border: 2px solid rgba(255,215,0,0.2); }
+
+/* Padrinos */
+.padrinos-kids-box { border: 2px dashed var(--primary); padding: 20px 40px; display: inline-block; border-radius: var(--radius); margin-top: 20px; }
+
+/* Tallas Labels */
+.tallas-labels { display: flex; justify-content: center; gap: 15px; margin: 20px 0; }
+.tallas-labels span { background: var(--primary); color: var(--dark); padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; }
+
+/* Botones */
+.btn-kids { background: var(--primary); color: var(--dark); padding: 12px 25px; border-radius: var(--radius); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+.btn-kids-outline { border: 2px solid var(--primary); color: var(--primary); padding: 10px 20px; border-radius: var(--radius); text-decoration: none; display: inline-block; margin-top: 20px; }
+.rsvp-btn-kids { background: #25d366; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+
+.section-title-kids { font-family: 'Bangers', cursive; color: var(--primary); font-size: 3.5rem; margin-bottom: 40px; }

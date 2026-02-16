@@ -1,0 +1,121 @@
+:root {
+    --social-color: #00bcd4; /* Azul turquesa de tu imagen */
+    --dark: #0a0e14;
+    --radius: 12px;
+}
+
+body {
+    background: var(--dark);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+#particles-js {
+    position: fixed; width: 100%; height: 100%; z-index: -1;
+}
+
+.hero-social {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(10,14,20,0.6), rgba(10,14,20,0.6)), url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.social-title {
+    font-size: 3.5rem;
+    color: var(--social-color);
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+/* Estilo Polaroid */
+.polaroid-frame {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    width: 280px;
+    margin: -50px auto 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transform: rotate(3deg);
+    transition: 0.3s;
+}
+
+.polaroid-frame:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.polaroid-frame img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.polaroid-caption {
+    font-family: 'Special Elite', cursive; /* Fuente tipo máquina de escribir */
+    color: #333;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Cards */
+.info-social { padding: 40px 5%; }
+.container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+
+.social-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid rgba(0, 188, 212, 0.2);
+}
+
+.icon-circle {
+    width: 60px; height: 60px;
+    background: var(--social-color);
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.4rem;
+}
+
+.hashtag-tag {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--social-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.btn-spotify {
+    background: #1DB954;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-social {
+    background: var(--social-color);
+    color: var(--dark);
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rsvp-social {
+    position: fixed; bottom: 30px; right: 30px;
+    background: #25d366; color: white;
+    padding: 15px 30px; border-radius: 50px;
+    text-decoration: none; font-weight: bold;
+    z-index: 1000;
+}

@@ -1,0 +1,221 @@
+:root {
+    --gold: #d4af37;
+    --dark: #0d0d0d;
+    --card-bg: #1a1a1a;
+    --white: #ffffff;
+    --accent-color: #d4af37;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--white);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 10vw, 5rem);
+    color: var(--gold);
+    margin: 10px 0;
+}
+
+.top-badge {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    color: var(--gold);
+}
+
+.divider {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Cuenta Regresiva */
+.countdown-container {
+    padding: 80px 20px;
+    background: var(--card-bg);
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.time-box {
+    background: var(--dark);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 85px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+/* Tarjetas de Detalles */
+.details {
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.detail-card {
+    background: var(--card-bg);
+    padding: 45px 30px;
+    border-radius: 20px;
+    border-bottom: 4px solid var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover { transform: translateY(-10px); }
+
+.detail-card i {
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+/* Galería Polaroid */
+.gallery { padding: 80px 0; }
+
+.polaroid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 45px 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.polaroid img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.polaroid p {
+    color: #222;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+/* Zona de Acción (RSVP y Regalos) */
+.action-zone {
+    padding: 100px 5%;
+    background: linear-gradient(to bottom, #0d0d0d, #050505);
+}
+
+.container-small { max-width: 600px; margin: 0 auto; }
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 45px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 60px;
+    backdrop-filter: blur(12px);
+}
+
+.icon-circle {
+    width: 75px; height: 75px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center; justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--gold);
+    font-size: 2rem;
+}
+
+.gift-btns-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Botones y Footer */
+.btn-gold, .btn-outline-gold {
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: black;
+    border-radius: 50px;
+}
+
+.btn-outline-gold {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 10px;
+    display: flex;
+    align-items: center; gap: 10px;
+}
+
+.btn-outline-gold:hover { background: var(--gold); color: black; }
+
+.btn-whatsapp-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #25D366;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.demo-footer { padding: 80px 20px; background: #050505; }
+
+.footer-logo-gold {
+    width: 130px;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
+    border-radius: 15px;
+}
